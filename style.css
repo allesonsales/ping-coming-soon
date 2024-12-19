@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+:root {
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+    --Gray: hsl(0, 0%, 59%);
+    --Blue: hsl(223, 87%, 63%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+    font-family: "Josefin Sans", serif;;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+section #logo-top {
+    width: 3rem;
+    margin-top: 1rem;
+}
+
+section .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+section .text h1 {
+    font-weight: 300;
+}
+
+section .text b {
+    font-weight: 800;
+}
+
+section .text span {
+    font-size: .6rem;
+    font-weight: 300;
+}
+
+
+.img-dashboard {
+    width: 90%;
+    margin-bottom: 2rem;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.form__email {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2rem;
+}
+
+form #email {
+    outline: none;
+    border: var(--Blue) solid 1px;
+    width: 100%;
+    margin-bottom: .2rem;
+    border-radius: 2rem;
+    padding: .7rem 2rem;
+    font-family: "Josefin Sans", serif;
+    font-size: .5rem;
+    color: var(--Blue);
+}
+
+form .error {
+        border: var(--Light-Red) solid 1px;
+}
+
+form span {
+    display: none;
+    font-size: .5rem;
+    color: red;
+}
+
+form #submit {
+    width: 100%;
+    background-color: var(--Blue);
+    border-radius: 2rem;
+    padding: .6rem 2rem;
+    font-family: "Josefin Sans", serif;
+    color: white;
+    font-size: .7rem;
+    outline: none;
+    border: none;
+    margin-bottom: .7rem;
+    transition: .2s ease-in-out;
+}
+
+form #submit:hover {
+    background-color: var(--Pale-Blue);
+    color: var(--Blue);
+    cursor: pointer;
+}
+
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .5rem;
+    gap: 1rem;
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.icons .bi {
+    background-color: white;
+    color: var(--Blue);
+    border: var(--Blue) solid 1px;
+    border-radius: 3rem;
+    padding: .5rem;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.icons .bi:hover {
+    background: var(--Blue);
+    color: white;
+}
+
+.attribution { 
+    font-size: .4rem;
+    text-align: center;
+}
+
+.attribution a { 
+    font-size: .5rem;
+    color: var(--Blue); 
+}
+
+@media (min-width: 768px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section {
+        width: 80%;
+    }
+
+    section .text h1 {
+        font-size: 2rem;
+        color: var(--Gray);
+    }
+
+    section .text b {
+        color: black;
+        font-size: 2rem;
+    }
+
+    form {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    form #email {
+        margin-bottom: 0;
+    }
+
+    form #submit {
+        width: 50%;
+    }
+}
